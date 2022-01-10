@@ -4,6 +4,7 @@ import inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(os.path.dirname(currentdir))
 os.sys.path.insert(0, parentdir)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 print("parentdir=", parentdir)
 import json
 from pybullet_envs.deep_mimic.learning.rl_world import RLWorld
